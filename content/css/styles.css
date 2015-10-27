@@ -1,0 +1,54 @@
+﻿.tab {
+    background-color: #5f5f5f;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #f1f1f1;
+
+}
+
+.tab:hover {
+    background-color: grey;
+
+}
+
+.cursor-hand {
+    cursor: pointer;
+}
+
+rating {
+    border-radius: 5px;
+    background: #8AC007;
+    padding: 10px;
+    color: white;
+    float: right;
+    clear: right;
+}
+
+user {
+	font-weight: bold;
+	color: #369;
+}
+
+button {
+    background:Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    outline:none;
+    color: grey;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.Context {
+    border-left-color:#369;
+    border-left-style:solid;
+}
+
+body {
+   width:500px;
+   height:500px;
+}
+
+ul {
+   list-style-type: none;
+}

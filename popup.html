@@ -1,94 +1,77 @@
 <!DOCTYPE html>
 <html>
-<style>
-
-.tab {
-    background-color: #5f5f5f;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #f1f1f1;
-
-}
-
-.tab:hover {
-    background-color: grey;
-
-}
-
-
-rating {
-    border-radius: 5px;
-    background: #8AC007;
-    padding: 10px;
-    color: white;
-    float: right;
-    clear: right;
-}
-
-user {
-	font-weight: bold;
-	color: #369;
-}
-
-button {
-    background:Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    outline:none;
-    color: grey;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.Context {
-    border-left-color:#369;
-    border-left-style:solid;
-}
-
-body {
-   width:500px;
-   height:500px;
-}
-
-ul {
-   list-style-type: none;
-}
-
-</style>
-
+<head>
+    <title>Comment</title>
+    <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/css/styles.css" rel="stylesheet" />
+</head>
 <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="id01">
+                    <a id="postToRedditButton" href="#">Post to Reddit</a>
+                    <a id="goToRedditButton" href="#">Go to Thread</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="tabs-637136">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#comments" data-toggle="tab">Comments</a>
+                        </li>
+                        <li>
+                            <a href="#settings" data-toggle="tab">Settings</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="comments">
+                            <div id="postTitle"></div>
+                            <div id="AvgRating" style="text-align: right;"></div>
+                            <br>
+                            <div id="id02">
 
-<div style="background-color: #5f5f5f;padding: 10px;">
-<span id="tab1" class="tab"> Reddit </span>
-<span id="tab2" class="tab"> Settings </span>
-</div>
-
-
-<div id="id01">
-<button id="postToRedditButton" hidden>Post to Reddit</button>
-<button id="goToRedditButton" hidden>Go to Thread</button>
-</div>
-
-<div id="postTitle"></div>
-<div id="AvgRating" style="text-align: right;"></div>
-<br>
-<div id="id02">
-
-</div>
-
-<div id="id03" hidden>
-Load with replies hidden: <input type="checkbox" id="opt1">
-<br>
-Don't indent replies: <input type="checkbox" id="opt2">
-<br>
-Show ratings and popovers: <input type="checkbox" id="opt3">
-</div>
-
-<div id="id04"></div>
+                            </div>
 
 
 
-<script src="popup.js"></script>
+                            <div id="id04"></div>
+                        </div>
+                        <div class="tab-pane" id="settings">
+                            <form role="form">
+                                <div class="checkbox">
 
+                                    <label>
+                                        <input type="checkbox" id="opt1" /> Load with replies hidden
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+
+                                    <label>
+                                        <input type="checkbox" id="opt2" /> Don't indent replies
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+
+                                    <label>
+                                        <input type="checkbox" id="opt3"  /> Show ratings and popovers
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="content/js/jquery-1.11.3.min.js"></script>
+    <script src="content/js/bootstrap.min.js"></script>
+    <script src="popup.js"></script>
 </body>
 </html>
