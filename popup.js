@@ -1,4 +1,10 @@
+/*
 
+Popup.js
+
+When the user clicks the icon, the popup page looks up the current tab's URL in the RedditMap to see if there is a Reddit ID (i.e. post) associated with it. If there is, popup.js uses the ID to request comments from Reddit for the post. It uses toHTML to parse the response and display the comment.
+
+*/
 
 var bkg = chrome.extension.getBackgroundPage();
 var RedditSearchRequest = new XMLHttpRequest();

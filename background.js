@@ -1,3 +1,11 @@
+/*
+
+Background.js
+
+Whenever a tab is updated to or switched to, the background page searches reddit using the URL of the current tab to see if it has been posted on Reddit. If it finds a post with the same URL, it will add the post's Reddit post ID to the RedditMap and update the badge with "reddit". If it doesn't find a post, it adds "" to the RedditMap. Note both a URL with query parameters and without are used to search, unless the domain is in QRequired (this is used for domains where the query parameters determine the page returned rather than the path).
+
+*/
+
 var RedditSearchRequest = new XMLHttpRequest();
 
 var redditToken = '';
@@ -134,35 +142,3 @@ function checkQRequired(url) {
 	return result;
 }
 
-
-
-/* OAuth2 -------------------------------------------------------------------------------------- */
-//Not Used
-
-/*
-function getRedditToken()  {
-	var RURI = chrome.identity.getRedirectURL();
-	var ClientID = '';
-	var RedditSearchURL = 'https://www.reddit.com/api/v1/authorize?client_id=' + ClientID + '&response_type=token&state=randtest&redirect_uri=' + RURI + '&scope=submit';
-	chrome.identity.launchWebAuthFlow({'url': RedditSearchURL, 'interactive': true}, function (redirect_url) {
-		var half = redirect_url.split('access_token=')[1];
-      		redditToken = half !== undefined ? decodeURIComponent(half.split('&')[0]) : '';
-	});
-}
-
-
-var SBRequest = new XMLHttpRequest();
-function SubmitComment(parentVal, commentVal) {
-	SBRequest.open("POST","https://oauth.reddit.com/api/comment",true);
-	SBRequest.setRequestHeader("User-Agent", "chrome:RedditCommentApp:v1.0 (by nbcd14)");
-	SBRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	SBRequest.setRequestHeader("Authorization", encodeURIComponent("bearer " + redditToken));
-	SBRequest.send({
-    		"api_type": "json",
-    		"text": commentVal,
-    		"thing_id":  parentVal
-	});
-}
-
-*/
-	
